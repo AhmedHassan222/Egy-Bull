@@ -18,7 +18,7 @@ body
 
 /* header */
 .news-wrapper {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--main-color);
   padding: 0.4rem;
   width: 100%;
@@ -46,14 +46,12 @@ body
     transform: translateX(100%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 nav {
-  background-image: url("../assets//AdobeStock_1634732539_Preview\ \(1\).jpeg");
-  background-repeat: no-repeat;
-  background-size:cover;
+  background: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,3 +135,5 @@ nav {
   margin-block: 30px;
   font-size: 1.5rem;
 }
+
+
