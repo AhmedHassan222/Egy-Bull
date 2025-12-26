@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: black;
+  --primary-color: white;
+  --secondary-color: #333333;
+  --off-black-color: #1a1a1a;
+}
+
+body 
+{
+    font-family: "Roboto", sans-serif;
+}
+
+/* header */
+.news-wrapper {
+  background-color: var(--primary-color);
+  color: var(--main-color);
+  padding: 0.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: newsWalking 20s linear infinite;
+}
+
+.news-wrapper:hover .news {
+  animation-play-state: paused;
+}
+
+.news-item {
+  margin-inline-end: 4rem;
+  text-transform: uppercase;
+}
+
+@keyframes newsWalking {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+nav {
+  background-image: url("../assets//AdobeStock_1634732539_Preview\ \(1\).jpeg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.nav-content a,
+.mobile-view a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-inline-end: 2rem;
+}
+
+.line {
+  transition: all 0.1s;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+}
+.line1 {
+  margin-bottom: 10px;
+}
+
+.line1-clicked {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.line3-clicked {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger-menu:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-content {
+    display: block;
+  }
+}
+
+.mobile-view {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-black-color);
+  height: 100vh;
+  padding: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.mobile-view a {
+  margin-block: 30px;
+  font-size: 1.5rem;
+}
